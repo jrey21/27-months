@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>Question and Answer</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="question">
+            <h1>Question</h1>
+            <p>What is your favorite flower? This flower will represent a special moment in our journey.</p>
+        </div>
+        <div class="answer">
+            <input type="text" id="answer" placeholder="Type your answer here...">
+            <button class="submit" onclick="submitAnswer()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        function submitAnswer() {
+            const answer = document.getElementById('answer').value;
+            if (answer) {
+                alert(`Your favorite flower is ${answer}!`);
+                window.location.href = "flower.html";
+            } else {
+                alert('Please enter your favorite flower.');
+            }
+        }
+    </script>
+</body>
+
+</html>
